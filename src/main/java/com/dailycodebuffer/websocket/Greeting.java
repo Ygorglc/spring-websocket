@@ -1,0 +1,23 @@
+package com.dailycodebuffer.websocket;
+
+
+
+public class Greeting {
+
+    private String message;
+
+    public Greeting(String message) {
+        this.message = message;
+    }
+
+    public Greeting() {
+    }
+
+    public String getMessage() {
+        return message;
+    }
+
+    public void setMessage(String message) {
+        this.message = message;
+    }
+}
