@@ -14,12 +14,12 @@ public class GreetingController {
 
     @SendTo("/topic/greetings")
 
-    public String greeting(@Payload String message) throws Exception {
+    public Greeting greeting(@Payload HelloMessage message) throws Exception {
 
         Thread.sleep(1000); // simulated delay
 
-        return message;
-
+        return new Greeting("Hello, " +
+                HtmlUtils.htmlEscape(message.getName()));
     }
 
 }
